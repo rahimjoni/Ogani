@@ -36,9 +36,17 @@
                                     <div>{{ Auth::user()->username }}</div>
                                     <span class="arrow_carrot-down"></span>
                                     <ul>
-                                        <li><a href="{{ url('/home') }}">Dashboard</a></li>
+                                        @can('isAdminAuthorVendor') <li><a href="{{ url('/home') }}">Dashboard</a></li> @endcan
                                         <li><a href="#">My Account</a></li>
                                         <li><a href="#">My Order</a></li>
+                                            @can('isCustomer')
+                                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                                     Logout
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                            @endcan
                                     </ul>
                                 </div>
                             @endguest

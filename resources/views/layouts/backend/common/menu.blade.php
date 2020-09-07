@@ -1,8 +1,7 @@
 <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
     <div class="brand-logo">
-        <a href="index.html">
-            <img src="{{ asset('backend/assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
-            <h5 class="logo-text">Dashtreme Admin</h5>
+        <a href="{{ url('/')}}/home">
+            <img src="{{ asset('frontend/img/logo.png') }}" alt="logo icon">
         </a>
     </div>
     <div class="user-details">
@@ -15,7 +14,7 @@
         <div id="user-dropdown" class="collapse">
             <ul class="user-setting-menu">
                 <li><a href="javaScript:void();"><i class="icon-user"></i>  My Profile</a></li>
-                <li><a href="javaScript:void();"><i class="icon-settings"></i> Setting</a></li>
+                <li><a href="javaScript:void();"><i class="icon-settings"></i> Password Setting</a></li>
                 <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                         <i class="icon-power mr-2"></i> Logout</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

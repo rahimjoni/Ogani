@@ -8,7 +8,7 @@
     <meta name="author" content=""/>
     <title>@yield('title') - {{ config('app.name', 'Ogani') }}</title>
     <!--favicon-->
-    <link rel="icon" href="{{ asset('backend/assets/images/favicon.ico') }}" type="image/x-icon"/>
+    <link rel="icon" href="{{ asset('frontend/img/logo.png') }}" type="image/x-icon"/>
     <!-- Vector CSS -->
     <link href="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
     <!-- simplebar CSS-->
